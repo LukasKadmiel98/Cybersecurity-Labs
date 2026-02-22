@@ -1,16 +1,20 @@
-# 🛡️ Cybersecurity & Offensive Security Labs
-### Por Lukas Kadmiel (Formado em ADS 🎓)
+# 🛡️ Cybersecurity Labs & Troubleshooting
+Laboratórios de Pentest, Hardening de sistemas e automação de segurança.
 
-Este repositório é dedicado à documentação técnica dos meus estudos e práticas em Cibersegurança. Aqui utilizo a minha base em Análise e Desenvolvimento de Sistemas para compreender vulnerabilidades ao nível do código e da infraestrutura.
+## 🐍 1. Network Port Scanner (Python)
+Script desenvolvido em Python para validação de serviços ativos. Este projeto une conceitos de **ADS** com Cybersecurity.
+* **Arquivo:** `port_scanner.py`
+* **Status:** Concluído. Identifica portas críticas como 22 (SSH) e 80 (HTTP).
 
-## 📁 Projetos e Laboratórios:
+## 🧱 2. Defesa com Firewall (Blue Team)
+Configuração de regras de proteção para mitigar superfícies de ataque.
+* **Ferramenta:** UFW (Uncomplicated Firewall).
+* **Ação:** Bloqueio da porta 80/TCP.
+* **Comando:** `sudo ufw deny 80/tcp`.
 
-### 1. Exploração de Serviços SSH (Metasploit)
-- **Cenário:** Teste de intrusão em serviço SSH local no ambiente Kali Linux (WSL2).
-- **Desafio Técnico:** Resolução de conflitos críticos de dependências do sistema utilizando `dpkg-divert`.
-- **Resultado:** Exploração bem-sucedida e abertura de sessão interativa.
-
-## 🛠️ Tecnologias Utilizadas:
-- **OS:** Kali Linux (WSL2)
-- **Ferramentas:** Metasploit Framework, Nmap, Dpkg
-- **Conhecimentos Aplicados:** Administração de Sistemas Linux e Segurança de Redes.
+## 🔎 3. Auditoria de Vulnerabilidades (Nikto)
+Análise detalhada do servidor Apache para encontrar falhas de configuração.
+* **Principais achados:**
+    * Vulnerabilidade a Clickjacking (falta de X-Frame-Options).
+    * Exposição do diretório `/server-status`.
+    * Vazamento de informações via ETags.
